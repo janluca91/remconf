@@ -14,7 +14,7 @@ import persistent_net.Arc;
 import representation.NetElement;
 
 public abstract class FileOutput extends Output {
-	public final static String PATH="target/";
+	public final static String PATH="target/result/";
 	protected final static String PREFIXNODEID="c";
 	protected FileWriter filewriter;
 	protected BufferedWriter bufferedwriter;

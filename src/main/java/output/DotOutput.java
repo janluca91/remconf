@@ -81,7 +81,7 @@ public class DotOutput extends FileOutput {
 	}
 	public void print(PetriNet p,Map<Set<Integer>,SCell> map_scell) throws IOException
 	{
-		String path2="source/";
+		String path2="src/main/resources/source/";
 		Path path = Paths.get(path2+filename+"/");
 		Files.createDirectories(path);
 		filewriter=new FileWriter(path2+filename+"/"+filename+suffix);

@@ -120,13 +120,13 @@ public class Compute {
 	    FileOutput fileoutput;
 	    fileoutput=new DotOutput(bridge.target,filename);
 	    fileoutput.print(staticPetriNet);
-	 	file_input=new File("src/main/resources/target/output"+filename+"/"+filename+".dot");
-	 	file_output=new File("src/main/resources/target/output"+filename+"/"+filename+SUFFIXGRAPHIC);
+	 	file_input=new File("target/result/"+filename+"/"+filename+".dot");
+	 	file_output=new File("target/result/"+filename+"/"+filename+SUFFIXGRAPHIC);
 	 	cmd=doublequotes+file_dot.getAbsolutePath()+doublequotes+" "+file_input.getAbsolutePath()+" -Tdot  -Grankdir=BT -o "+file_output.getAbsolutePath();
 	 	p=Runtime.getRuntime().exec(cmd);
 	 	p.waitFor();
 	 	for(String format:formats) {
-	 		file_output=new File("src/main/resources/target/output"+filename+"/"+filename+"."+format);
+	 		file_output=new File("target/result/"+filename+"/"+filename+"."+format);
 	 		cmd= doublequotes+file_dot.getAbsolutePath()+doublequotes+" "+file_input.getAbsolutePath()+" -T"+format+" -o "+file_output.getAbsolutePath();
 	 		p=Runtime.getRuntime().exec(cmd);
 	 		p.waitFor();
